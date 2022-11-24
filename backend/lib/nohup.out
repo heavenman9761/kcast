@@ -1,0 +1,985 @@
+2020-09-02 17:28:13.190695: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-02 17:28:13.190731: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-09-02 22:01:23.924569: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-09-02 22:01:23.924886: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2020-09-02 22:01:23.924915: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2020-09-02 22:01:23.947661: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2020-09-02 22:01:23.947761: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x51401e0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-09-02 22:01:23.947770: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-09-03 21:36:13.360661: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-03 21:36:13.360692: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-09-03 22:00:18.301018: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-09-03 22:00:18.301043: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2020-09-03 22:00:18.301067: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2020-09-03 22:00:18.305564: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2020-09-03 22:00:18.305638: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56490f0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-09-03 22:00:18.305646: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-09-03 22:12:27.102661: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2020-09-03 22:12:27.147698: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2020-09-03 22:12:27.152720: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2020-09-03 22:12:27.156439: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2020-09-03 22:12:27.546768: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2020-09-05 09:59:27.990619: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-05 09:59:27.990652: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Traceback (most recent call last):
+  File "lstm_service.py", line 27, in <module>
+    schedule.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 563, in run_pending
+    default_scheduler.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 94, in run_pending
+    self._run_job(job)
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 147, in _run_job
+    ret = job.run()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 466, in run
+    ret = self.job_func()
+  File "/usr/local/python_web/Single_page/backend/lib/job_time.py", line 27, in job_leak
+    a = Model.query_by_date(start_time, stop_time)
+  File "/usr/local/python_web/Single_page/backend/models/Model.py", line 53, in query_by_date
+    data.columns = ['FREQUENCY', 'LEAKLEVEL', 'MEASUREDAY']
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/pandas/core/generic.py", line 5143, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 66, in pandas._libs.properties.AxisProperty.__set__
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/pandas/core/generic.py", line 564, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/pandas/core/internals/managers.py", line 217, in set_axis
+    f"Length mismatch: Expected axis has {old_len} elements, new "
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 3 elements
+2020-09-05 23:02:40.425502: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-05 23:02:40.425534: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-09-05 23:23:07.556883: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-05 23:23:07.556914: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Traceback (most recent call last):
+  File "lstm_service.py", line 27, in <module>
+    schedule.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 563, in run_pending
+    default_scheduler.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 94, in run_pending
+    self._run_job(job)
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 147, in _run_job
+    ret = job.run()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 466, in run
+    ret = self.job_func()
+  File "/usr/local/python_web/Single_page/backend/lib/job_time.py", line 28, in job_leak
+    if not a:
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/pandas/core/generic.py", line 1327, in __nonzero__
+    f"The truth value of a {type(self).__name__} is ambiguous. "
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2020-09-08 22:10:18.164286: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-08 22:10:18.164319: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-09-08 22:27:51.493591: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-08 22:27:51.493628: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Traceback (most recent call last):
+  File "lstm_service.py", line 27, in <module>
+    schedule.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 563, in run_pending
+    default_scheduler.run_pending()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 94, in run_pending
+    self._run_job(job)
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 147, in _run_job
+    ret = job.run()
+  File "/root/.local/share/virtualenvs/Single_page-O7swRj8x/lib/python3.7/site-packages/schedule/__init__.py", line 466, in run
+    ret = self.job_func()
+  File "/usr/local/python_web/Single_page/backend/lib/job_time.py", line 28, in job_leak
+    if a.empty:
+AttributeError: 'NoneType' object has no attribute 'empty'
+2020-09-10 19:22:56.741978: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-09-10 19:22:56.742012: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-09-10 22:03:02.023258: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-09-10 22:03:02.023290: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2020-09-10 22:03:02.023426: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2020-09-10 22:03:02.028576: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2020-09-10 22:03:02.029411: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x52dc520 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-09-10 22:03:02.029433: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+2020-10-20 10:01:28.451619: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-10-20 10:01:28.451653: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-10-20 22:01:48.240175: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-10-20 22:01:48.240207: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2020-10-20 22:01:48.240358: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2020-10-20 22:01:48.267023: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2020-10-20 22:01:48.267138: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x6844430 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-10-20 22:01:48.267147: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+2021-01-27 17:10:56.408302: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-01-27 17:10:56.408629: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Traceback (most recent call last):
+  File "lstm_service.py", line 28, in <module>
+    time.sleep(300)
+KeyboardInterrupt
+2021-01-27 17:25:43.253078: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-01-27 17:25:43.253107: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-01-27 17:44:49.034315: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-01-27 17:44:49.034341: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-01-27 22:00:51.455965: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-01-27 22:00:51.455997: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-01-27 22:00:51.456018: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2021-01-27 22:00:51.514173: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2021-01-27 22:00:51.515118: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5669420 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-01-27 22:00:51.515130: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-01-27 22:04:57.803667: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-01-27 22:04:57.803690: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-01-27 22:04:57.803712: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2021-01-27 22:04:57.808019: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2021-01-27 22:04:57.808082: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x53f2470 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-01-27 22:04:57.808090: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-01-27 22:10:06.147325: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2021-01-27 22:10:06.196684: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2021-01-27 22:10:06.202023: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2021-01-27 22:10:06.205603: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+2021-01-27 22:10:06.564403: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 10240000 exceeds 10% of free system memory.
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+2021-05-11 10:56:21.825678: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-05-11 10:56:21.825996: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-05-11 22:01:38.315146: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-05-11 22:01:38.315167: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-05-11 22:01:38.315296: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2021-05-11 22:01:38.320324: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2021-05-11 22:01:38.320428: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4df0580 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-11 22:01:38.320436: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+2021-07-05 12:11:04.591371: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-07-05 12:11:04.592027: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-07-05 22:01:19.775268: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-07-05 22:01:19.775306: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-07-05 22:01:19.775485: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2021-07-05 22:01:19.780503: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2021-07-05 22:01:19.780582: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4f3d330 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-07-05 22:01:19.780590: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+2021-11-03 18:32:41.804886: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2021-11-03 18:32:41.805767: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-11-03 22:02:49.945452: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-11-03 22:02:49.945475: W tensorflow/stream_executor/cuda/cuda_driver.cc:312] failed call to cuInit: UNKNOWN ERROR (303)
+2021-11-03 22:02:49.945493: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gncloudlocalhost.localdomain): /proc/driver/nvidia/version does not exist
+2021-11-03 22:02:49.950366: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 3191995000 Hz
+2021-11-03 22:02:49.950439: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x6402080 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-11-03 22:02:49.950452: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:148: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  plt.figure(figsize=(20,10))
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+/usr/local/python_web/Single_page/backend/lib/lstm_model_new.py:141: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  index_frame[0][i] = index_frame[0][i][8:]
+Traceback (most recent call last):
+  File "lstm_service.py", line 3, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "lstm_service.py", line 3, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
+Traceback (most recent call last):
+  File "lstm_service.py", line 3, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'

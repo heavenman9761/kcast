@@ -1,0 +1,16 @@
+python3.7: can't open file 'lib/start_service.py': [Errno 2] No such file or directory
+python3.7: can't open file 'lib/start_service.py': [Errno 2] No such file or directory
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+python3.7: can't open file '/usr/local/python_web/Single_page/backend/lib/start_service.py': [Errno 2] No such file or directory
+[uWSGI] getting INI configuration from uwsgi.ini
+Traceback (most recent call last):
+  File "/usr/local/python_web/Single_page/backend/lib/lstm_service.py", line 9, in <module>
+    from lib.check_system import check_system
+ModuleNotFoundError: No module named 'lib'
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
+[uWSGI] getting INI configuration from uwsgi.ini
